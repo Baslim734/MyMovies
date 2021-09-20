@@ -31,7 +31,7 @@ public interface MovieDao {
     @Delete
     void deleteMovie(Movie movie);
 
-    @Query("SELECT * FROM movies")
+    @Query("SELECT * FROM favorite_movies")
     LiveData<List<FavoriteMovie>> getAllFavoriteMovies();
 
     @Insert

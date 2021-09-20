@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 /**
  * Created by Nikita Biryukov on 15.09.2021.
  */
-@Database(entities = {Movie.class, FavoriteMovie.class}, version = 2, exportSchema = false)
+@Database(entities = {Movie.class, FavoriteMovie.class}, version = 3, exportSchema = false)
 public abstract class MovieDatabase extends RoomDatabase {
 
     private static final String DB_NAME = "movies.db";

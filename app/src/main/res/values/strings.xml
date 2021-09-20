@@ -10,4 +10,7 @@
     <string name="description">Описание:</string>
     <string name="added_to_favorite">Добавлено в избранное</string>
     <string name="deleted_from_favorite">Удалено из избранного</string>
+    <string name="main_menu">Главная</string>
+    <string name="favorite">Избранное</string>
+    <string name="start_trailer">Запустить трейлер</string>
 </resources>

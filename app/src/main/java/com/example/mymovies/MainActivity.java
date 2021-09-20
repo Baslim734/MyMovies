@@ -1,5 +1,6 @@
 package com.example.mymovies;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LiveData;
@@ -11,14 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.mymovies.data.MainViewModel;
 import com.example.mymovies.data.Movie;
+import com.example.mymovies.adapters.MovieAdapter;
 import com.example.mymovies.utils.JSONUtils;
 import com.example.mymovies.utils.NetworkUtils;
 
@@ -36,6 +40,29 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewMostRated;
 
     private MainViewModel viewModel;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.itemMain:
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.itemFavorite:
+                Intent intentToFavorite = new Intent(this, FavoriteActivity.class);
+                startActivity(intentToFavorite);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

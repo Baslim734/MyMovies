@@ -135,5 +135,21 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageViewBigPoster"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/favorite_off" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTrailer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewReviews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewTrailer"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
