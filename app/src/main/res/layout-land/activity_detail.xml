@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".DetailActivity">
+        <ImageView
+            android:id="@+id/imageViewBigPoster"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imageViewAddToFavorite"
+            android:layout_width="@dimen/favorite_width"
+            android:layout_height="@dimen/favorite_height"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginTop="16dp"
+            android:onClick="onClickChangeFavorite"
+            app:layout_constraintTop_toTopOf="@+id/imageViewBigPoster"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewBigPoster"
+            app:srcCompat="@drawable/favorite_off" />
+
+    <ScrollView
+        android:id="@+id/scrollViewInfo"
+        android:layout_width="0dp"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBigPoster"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    <include
+        layout="@layout/movie_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_info"/>
+
+        </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
